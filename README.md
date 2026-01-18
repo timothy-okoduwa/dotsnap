@@ -230,7 +230,7 @@ Display the current version:
 
 ```bash
 dotsnap --version
-# Output: 1.0.0
+# Output: 1.0.1
 ```
 
 ---
