@@ -4,7 +4,7 @@
   "description": "Mask your .env files securely - CLI and Web UI",
   "main": "src/index.js",
   "bin": {
-    "dotsnap": "./bin/dotsnap.js"
+    "dotsnap": "bin/dotsnap.js"
   },
   "scripts": {
     "test": "echo \"No tests yet\" && exit 0"
@@ -18,16 +18,16 @@
     "dotenv",
     "cli"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "Your Name <Timothy Okoduwa>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/dotsnap.git"
+    "url": "git+https://github.com/timothy-okoduwa/dotsnap.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/dotsnap/issues"
+    "url": "https://github.com/timothy-okoduwa/dotsnap/issues"
   },
-  "homepage": "https://github.com/yourusername/dotsnap#readme",
+  "homepage": "https://github.com/timothy-okoduwa/dotsnap#readme",
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^11.1.0",
