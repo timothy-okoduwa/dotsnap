@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DotSnap
 
-## Getting Started
+Mask your .env files securely across machines. Built for environment backups and best practices.
 
-First, run the development server:
+## Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+dotsnap/
+├── app/
+│   ├── layout.tsx          # Root layout with global styles
+│   ├── page.tsx            # Home page with navigation logic
+│   ├── globals.css         # Global CSS and Tailwind imports
+│   └── tool/
+│       └── page.tsx        # Tool page with masking functionality
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx      # App header with navigation
+│   │   └── Footer.tsx      # App footer
+│   ├── home/
+│   │   ├── Hero.tsx        # Hero section with CTA
+│   │   ├── InstallMethods.tsx  # CLI, NPX, and Web UI options
+│   │   ├── Features.tsx    # Feature grid
+│   │   └── Security.tsx    # Security guarantees section
+│   ├── tool/
+│   │   ├── ToolHeader.tsx  # Tool page header
+│   │   ├── Controls.tsx    # Masking options controls
+│   │   ├── EnvInput.tsx    # Input textarea with stats
+│   │   ├── EnvOutput.tsx   # Output textarea with actions
+│   │   └── StatsBar.tsx    # Stats display component
+│   ├── ui/
+│   │   └── Toast.tsx       # Toast notification component
+│   └── shared/
+│       └── Button.tsx      # Reusable button component
+├── lib/
+│   ├── mask.ts            # Masking logic
+│   ├── stats.ts           # Stats calculation
+│   ├── risky.ts           # Risky key detection
+│   └── share.ts           # Share link generation
+└── styles/
+    └── animations.css     # Animation keyframes
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Client-Side Processing**: All masking happens locally
+- **Smart Detection**: Automatically identifies risky keys
+- **Format Preserving**: Maintains structure and comments
+- **Share Safely**: Generate shareable links without exposing secrets
+- **Multiple Options**: CLI, NPX, or Web UI
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Development
 
-## Learn More
+```bash
+# Install dependencies
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Run development server
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Build for production
+npm run build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Start production server
+npm start
+```
 
-## Deploy on Vercel
+## Architecture Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### State Management
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Uses React hooks (`useState`, `useEffect`) for local state
+- LocalStorage for persisting input content
+- No global state management needed
+
+### Styling
+
+- Tailwind CSS for utility-first styling
+- Custom animations in `styles/animations.css`
+- Dark theme with emerald accent color
+- Responsive grid layouts
+
+### Type Safety
+
+- Full TypeScript coverage
+- Interface definitions for all props
+- Strict type checking enabled
+
+### Code Organization
+
+- **Components**: Organized by feature (layout, home, tool)
+- **Lib**: Pure functions for business logic
+- **App**: Next.js App Router pages
+- **Separation of Concerns**: UI components don't contain business logic
+
+### Performance
+
+- Client-side only (no SSR needed)
+- Minimal re-renders
+- Efficient string processing
+- No external API calls
+
+## License
+
+MIT

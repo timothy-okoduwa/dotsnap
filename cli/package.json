@@ -1,0 +1,39 @@
+{
+  "name": "dotsnap",
+  "version": "1.0.0",
+  "description": "Mask your .env files securely - CLI and Web UI",
+  "main": "src/index.js",
+  "bin": {
+    "dotsnap": "./bin/dotsnap.js"
+  },
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "env",
+    "environment",
+    "secrets",
+    "security",
+    "mask",
+    "dotenv",
+    "cli"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/dotsnap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/dotsnap/issues"
+  },
+  "homepage": "https://github.com/yourusername/dotsnap#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "ora": "^5.4.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
