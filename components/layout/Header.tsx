@@ -16,19 +16,21 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           <a
-            href="#"
+            href="https://github.com/timothy-okoduwa/dotsnap?tab=readme#dotsnap"
             className="text-sm text-gray-400 hover:text-white transition-colors font-mono"
           >
             Docs
           </a>
           <a
-            href="#"
+            href="https://github.com/timothy-okoduwa/dotsnap"
             className="text-sm text-gray-400 hover:text-white transition-colors font-mono"
           >
             GitHub
           </a>
           <Button variant="primary" size="sm">
-            Star on GitHub
+            <a href="https://github.com/timothy-okoduwa/dotsnap">
+              Star on GitHub
+            </a>
           </Button>
         </div>
       </div>

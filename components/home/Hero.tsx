@@ -33,7 +33,11 @@ export default function Hero({ onGetStarted }: HeroProps) {
         <Button variant="primary" onClick={onGetStarted}>
           Get Started
         </Button>
-        <Button variant="secondary">★ Star on GitHub</Button>
+        <Button variant="secondary">
+          <a href="https://github.com/timothy-okoduwa/dotsnap">
+            ★ Star on GitHub
+          </a>
+        </Button>
       </div>
 
       {/* Code Preview */}
