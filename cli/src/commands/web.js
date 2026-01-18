@@ -9,7 +9,7 @@ async function webCommand(options) {
   console.log("");
 
   // Try to open the hosted web version
-  const url = "https://dotsnap.com/tool"; // Replace with your actual domain
+  const url = "https://dotsnap.netlify.app/tool"; // Replace with your actual domain
 
   logSuccess(`Opening browser at: ${chalk.cyan(url)}`);
   console.log("");

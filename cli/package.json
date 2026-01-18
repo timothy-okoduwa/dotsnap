@@ -1,6 +1,6 @@
 {
   "name": "dotsnap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mask your .env files securely - CLI and Web UI",
   "main": "src/index.js",
   "bin": {
@@ -31,6 +31,7 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^11.1.0",
+    "open": "^11.0.0",
     "ora": "^5.4.1"
   },
   "engines": {
